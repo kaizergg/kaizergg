@@ -380,3 +380,58 @@ footer .socials a {
   background: rgba(212, 175, 55, 0.1);
   transition: 0.3s;
 }
+
+
+/* === Equipos del Club === */
+
+.equipos-hero {
+  background: linear-gradient(135deg, #013220, #000);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.equipos-hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #d4af37; /* Dorado Kaizer */
+}
+
+.equipos-hero p {
+  font-size: 1.1em;
+  color: #ccc;
+}
+
+.equipos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+  padding: 60px 10%;
+  background: #f5f5f5;
+}
+
+.equipo-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+}
+
+.equipo-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.equipo-card img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.equipo-card h3 {
+  color: #013220;
+  font-weight: bold;
+  font-size: 1.3em;
+}
