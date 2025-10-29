@@ -203,11 +203,13 @@ footer .socials a {
 
 
 
-/* Carrusel de logos */
+/* Carrusel de logos con colores originales */
 .carrusel-logos {
   overflow: hidden;
-  background-color: #000;
-  padding: 20px 0;
+  background: #000; /* Fondo negro para resaltar los logos */
+  padding: 25px 0;
+  border-top: 2px solid #222;
+  border-bottom: 2px solid #222;
 }
 
 .slider {
@@ -219,7 +221,7 @@ footer .socials a {
 .slide-track {
   display: flex;
   width: calc(250px * 14);
-  animation: scroll 10s linear infinite;
+  animation: scroll 45s linear infinite;
 }
 
 .slide {
@@ -232,7 +234,7 @@ footer .socials a {
 .slide img {
   height: 70px;
   width: auto;
-  filter: brightness(0) invert(1); /* Blanco sobre fondo negro */
+  margin: 0 20px;
   opacity: 0.9;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
