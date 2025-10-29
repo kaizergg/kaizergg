@@ -246,3 +246,4 @@ footer .socials a {
   0% { transform: translateX(0); }
   100% { transform: translateX(calc(-250px * 7)); }
 }
+animation: scroll 40s linear infinite;
