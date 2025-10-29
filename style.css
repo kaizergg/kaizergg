@@ -265,3 +265,118 @@ footer .socials a {
   background: #1ebe5b;
   transform: scale(1.05);
 }
+
+
+
+/* === eSports Page === */
+
+.esports-hero {
+  background: linear-gradient(135deg, #0a0a0a, #013220);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.esports-hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #d4af37; /* dorado */
+}
+
+.esports-jornada {
+  text-align: center;
+  padding: 40px 20px;
+  background: #111;
+  color: #fff;
+}
+
+.esports-jornada .fecha h3 {
+  color: #d4af37;
+  letter-spacing: 1px;
+}
+
+.fecha-card {
+  display: inline-block;
+  background: #1a1a1a;
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  padding: 15px 30px;
+  margin: 20px 0;
+}
+
+.fecha-card p {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.fecha-card h4 {
+  margin-top: 10px;
+  color: #d4af37;
+  font-weight: bold;
+}
+
+.fases {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.fases button {
+  background: #d4af37;
+  color: #000;
+  border: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fases button:hover {
+  background: #fff;
+  color: #111;
+  transform: scale(1.05);
+}
+
+/* Tabla de posiciones */
+.tabla-posiciones {
+  padding: 40px 10%;
+  background: #000;
+  color: #fff;
+  overflow-x: auto;
+}
+
+.tabla-posiciones table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  min-width: 700px;
+}
+
+.tabla-posiciones th {
+  background: #013220;
+  color: #d4af37;
+  padding: 12px;
+  text-transform: uppercase;
+}
+
+.tabla-posiciones td {
+  padding: 12px;
+  border-bottom: 1px solid #222;
+}
+
+.tabla-posiciones img {
+  height: 35px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.tabla-posiciones tr:hover {
+  background: rgba(212, 175, 55, 0.1);
+  transition: 0.3s;
+}
