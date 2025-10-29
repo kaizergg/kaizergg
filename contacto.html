@@ -3,63 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto | Corporación Kaizer GG</title>
+  <title>Contáctanos | Corporación Kaizer GG</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="Icon" href="CORP KGG.png">
+   <link rel="Icon" href="CORP KGG.png">
 </head>
 <body>
 
   <header class="navbar">
-    <div class="logo">Kaizer GG</div>
+    <div class="logo">Corporación Kaizer GG</div>
     <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="futbol.html">Fútbol</a></li>
-        <li><a href="esports.html">eSports</a></li>
-        <li><a href="contacto.html" class="active">Contacto</a></li>
-      </ul>
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="contacto.html" class="active">Contáctanos</a>
     </nav>
   </header>
 
-<section class="carrusel-logos">
-  <div class="slider">
-    <div class="slide-track">
-      <!-- Sustituye las rutas con tus logos reales -->
-      <div class="slide"><img src="CORP KGG.png" alt="Logo 1"></div>
-      <div class="slide"><img src="GRAN KAIZER 1.png" alt="Logo 2"></div>
-      <div class="slide"><img src="LOGO KAIZER F.C.png" alt="Logo 3"></div>
-      <div class="slide"><img src="GK2.png" alt="Logo 4"></div>
-      <div class="slide"><img src="GK3.png" alt="Logo 5"></div>
-      <div class="slide"><img src="GK4.png" alt="Logo 6"></div>
-      <div class="slide"><img src="ALIEDI.png" alt="Logo 7"></div>
-      <!-- puedes duplicar estos logos si quieres que el bucle sea continuo -->
-      <div class="slide"><img src="AVENTOR.png" alt="Logo 1"></div>
-      <div class="slide"><img src="ALICI.png" alt="Logo 2"></div>
-      <div class="slide"><img src="ARIZ.png" alt="Logo 3"></div>
-    </div>
-  </div>
-</section>
-  
-  <section class="hero contact">
-    <h1>Contáctanos</h1>
-    <p>Únete al proyecto o solicita información sobre nuestras divisiones.</p>
-  </section>
+  <section class="contacto-container">
+    <div class="contacto-info">
+      <h2>Contáctanos</h2>
+      <p>Completa el formulario y tu mensaje se enviará directamente a nuestro WhatsApp 📱</p>
 
-  <section class="content contact-form">
-    <form>
-      <label>Nombre</label>
-      <input type="text" placeholder="Tu nombre">
-      <label>Correo</label>
-      <input type="email" placeholder="Tu correo electrónico">
-      <label>Mensaje</label>
-      <textarea placeholder="Tu mensaje"></textarea>
-      <button type="submit">Enviar</button>
-    </form>
+      <form id="contactForm" class="contacto-form">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+        </div>
+
+        <div class="form-group">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="asunto">Asunto</label>
+          <input type="text" id="asunto" name="asunto" placeholder="Motivo del mensaje" required>
+        </div>
+
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-enviar">Enviar por WhatsApp</button>
+      </form>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 Corporación Kaizer GG</p>
+    <p>© 2025 Corporación Kaizer GG — Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e){
+      e.preventDefault(); // Evita que recargue la página
+
+      // 👉 Cambia este número por tu WhatsApp (formato internacional sin + ni espacios)
+      const telefono = "573001234567"; 
+
+      // Obtener datos del formulario
+      const nombre = document.getElementById("nombre").value;
+      const correo = document.getElementById("correo").value;
+      const asunto = document.getElementById("asunto").value;
+      const mensaje = document.getElementById("mensaje").value;
+
+      // Crear texto del mensaje
+      const texto = `👋 Hola, soy ${nombre}.%0A📧 Correo: ${correo}%0A📌 Asunto: ${asunto}%0A💬 Mensaje:%0A${mensaje}`;
+
+      // Enlace de WhatsApp
+      const url = `https://wa.me/${telefono}?text=${texto}`;
+
+      // Abrir chat
+      window.open(url, "_blank");
+    });
+  </script>
 
 </body>
 </html>
