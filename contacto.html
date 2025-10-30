@@ -3,81 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contáctanos | Corporación Kaizer GG</title>
+  <title>Contacto | Corporación Kaizer GG</title>
   <link rel="stylesheet" href="style.css">
-   <link rel="Icon" href="CORP KGG.png">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body>
-
-  <header class="navbar">
-    <div class="logo">Corporación Kaizer GG</div>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="nosotros.html">Nosotros</a>
-      <li><a href="futbol.html">Fútbol</a></li>
-        <li><a href="esports.html">eSports</a></li>
-      <a href="contacto.html" class="active">Contáctanos</a>
-    </nav>
+<body class="contacto-body">
+  <header class="header">
+    <h1>Contáctanos</h1>
+    <p>Comunícate con la <strong>Corporación Kaizer GG</strong> para información sobre fútbol, eSports o alianzas.</p>
   </header>
 
   <section class="contacto-container">
-    <div class="contacto-info">
-      <h2>Contáctanos</h2>
-      <p>Completa el formulario y tu mensaje se enviará directamente a nuestro WhatsApp 📱</p>
+    <div class="contact-card">
+      <div class="icon">
+        📍
+      </div>
+      <h2>Ubicación</h2>
+      <p>Colombia — Sede Principal<br>Corporación Deportiva y eSports Kaizer GG</p>
+      <a href="https://maps.google.com" target="_blank" class="btn">Ver en Google Maps</a>
+    </div>
 
-      <form id="contactForm" class="contacto-form">
-        <div class="form-group">
-          <label for="nombre">Nombre</label>
-          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
-        </div>
+    <div class="contact-card">
+      <div class="icon">
+        💬
+      </div>
+      <h2>WhatsApp</h2>
+      <p>Haz clic para escribirnos directamente vía WhatsApp.</p>
+      <a href="https://wa.me/573001234567?text=Hola%20Kaizer%20GG,%20quisiera%20más%20información." target="_blank" class="btn">Enviar mensaje</a>
+    </div>
 
-        <div class="form-group">
-          <label for="correo">Correo electrónico</label>
-          <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
-        </div>
-
-        <div class="form-group">
-          <label for="asunto">Asunto</label>
-          <input type="text" id="asunto" name="asunto" placeholder="Motivo del mensaje" required>
-        </div>
-
-        <div class="form-group">
-          <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
-        </div>
-
-        <button type="submit" class="btn-enviar">Enviar por WhatsApp</button>
-      </form>
+    <div class="contact-card">
+      <div class="icon">
+        ✉️
+      </div>
+      <h2>Correo</h2>
+      <p>Si prefieres, puedes enviarnos un correo electrónico.</p>
+      <a href="mailto:contacto@kaizergg.com" class="btn">Enviar correo</a>
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 Corporación Kaizer GG — Todos los derechos reservados.</p>
+  <footer class="footer">
+    <p>© 2025 Corporación Kaizer GG — Todos los derechos reservados</p>
   </footer>
-
-  <script>
-    document.getElementById("contactForm").addEventListener("submit", function(e){
-      e.preventDefault(); // Evita que recargue la página
-
-      // 👉 Cambia este número por tu WhatsApp (formato internacional sin + ni espacios)
-      const telefono = "573181824433"; 
-
-      // Obtener datos del formulario
-      const nombre = document.getElementById("nombre").value;
-      const correo = document.getElementById("correo").value;
-      const asunto = document.getElementById("asunto").value;
-      const mensaje = document.getElementById("mensaje").value;
-
-      // Crear texto del mensaje
-      const texto = `👋 Hola, soy ${nombre}.%0A📧 Correo: ${correo}%0A📌 Asunto: ${asunto}%0A💬 Mensaje:%0A${mensaje}`;
-
-      // Enlace de WhatsApp
-      const url = `https://wa.me/${telefono}?text=${texto}`;
-
-      // Abrir chat
-      window.open(url, "_blank");
-    });
-  </script>
-
 </body>
 </html>
