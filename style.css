@@ -412,7 +412,7 @@ footer .socials a {
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 30px;
   padding: 60px 10%;
-  background: #f5f5f5;
+  background: #000000;
 }
 
 .equipo-card {
