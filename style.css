@@ -59,6 +59,11 @@ body {
   animation: slideUp 1.5s ease;
 }
 
+.hero h3 {
+  font-weight: 800;
+  color: #FFFFFF; /* BLANCO */
+}
+
 .hero h1 {
   font-weight: 800;
   color: #d4af37; /* Dorado Kaizer */
