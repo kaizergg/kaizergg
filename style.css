@@ -440,3 +440,99 @@ footer .socials a {
   font-weight: bold;
   font-size: 1.3em;
 }
+
+
+
+/* ===== Página de Contacto ===== */
+.contacto-body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f6f6f6;
+  color: #111;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  text-align: center;
+  padding: 60px 20px 20px;
+}
+
+.header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5em;
+  color: #013220; /* Verde Kaizer */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.header p {
+  max-width: 600px;
+  margin: 10px auto;
+  color: #555;
+}
+
+.contacto-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.contact-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  padding: 30px;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+}
+
+.contact-card .icon {
+  font-size: 3em;
+  color: #d4af37; /* Dorado Kaizer */
+  margin-bottom: 15px;
+}
+
+.contact-card h2 {
+  font-family: 'Orbitron', sans-serif;
+  color: #013220;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.contact-card p {
+  color: #333;
+  font-size: 0.95em;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: #013220;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #d4af37;
+  color: #111;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #013220;
+  color: #fff;
+  font-size: 0.9em;
+}
