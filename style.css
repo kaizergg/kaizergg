@@ -211,7 +211,7 @@ footer .socials a {
 /* Carrusel de logos con colores originales */
 .carrusel-logos {
   overflow: hidden;
-  background: #000; /* Fondo negro para resaltar los logos */
+  background: #ffffff; /* Fondo negro para resaltar los logos */
   padding: 25px 0;
   border-top: 2px solid #222;
   border-bottom: 2px solid #222;
