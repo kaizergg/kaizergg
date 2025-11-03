@@ -568,11 +568,41 @@ footer .socials a {
 .partidos-kaizer h2 {
   color: #d4af37;
   font-size: 2em;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
+/* Navegación jornadas */
+.navegacion-jornada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.navegacion-jornada h3 {
+  font-size: 1.5em;
+  color: #0f3;
+}
+
+.navegacion-jornada button {
+  background: #0f3;
+  border: none;
+  color: #000;
+  font-size: 1.2em;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.navegacion-jornada button:hover {
+  background: #d4af37;
+}
+
+/* Tarjetas */
 .grid-partidos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -581,6 +611,7 @@ footer .socials a {
 }
 
 .card-partido {
+  position: relative;
   background: linear-gradient(180deg, #0a0a0a, #111);
   border: 1px solid #0f3;
   border-radius: 12px;
@@ -593,12 +624,27 @@ footer .socials a {
   box-shadow: 0 0 15px rgba(0, 255, 100, 0.3);
 }
 
-.jornada {
-  font-weight: bold;
-  color: #d4af37;
-  margin-bottom: 10px;
+/* Encabezado con logo de competencia */
+.header-partido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
+.header-partido p {
+  color: #d4af37;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.logo-competencia {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Equipos */
 .equipos {
   display: flex;
   align-items: center;
@@ -644,3 +690,4 @@ footer .socials a {
   background: #d4af37;
   color: #111;
 }
+
