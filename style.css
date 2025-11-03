@@ -7,8 +7,8 @@
 }
 
 body {
-  background: #0a0a0a;
-  color: #fff;
+  background-color: #fff; /* fondo blanco */
+  color: #000; /* texto negro */
   animation: fadeIn 1.2s ease-in-out;
 }
 
