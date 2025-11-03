@@ -38,54 +38,111 @@
 
   
 <section class="partidos-kaizer">
-  <h2>Próximos Partidos</h2>
-  
-  <div class="grid-partidos">
+  <h2>Partidos del Primer Equipo</h2>
 
-    <!-- Partido 1 -->
-    <div class="card-partido">
-      <div class="jornada">Jornada 1</div>
-      <div class="equipos">
-        <div class="equipo">
-          <img src="img/kaizer.png" alt="Kaizer F.C.">
-          <p>KAIZER F.C.</p>
-        </div>
-        <span class="vs">vs</span>
-        <div class="equipo">
-          <img src="img/rival.png" alt="Rival F.C.">
-          <p>RIVAL F.C.</p>
-        </div>
-      </div>
-      <div class="info-partido">
-        <p><i class="fa-regular fa-calendar"></i> Sábado 09/11 — 15:00</p>
-        <p><i class="fa-solid fa-location-dot"></i> Estadio Municipal</p>
-      </div>
-      <a href="#" class="btn-partido">VER FICHA</a>
-    </div>
+  <div class="navegacion-jornada">
+    <button id="prevJornada"><i class="fa-solid fa-chevron-left"></i></button>
+    <h3 id="tituloJornada">Jornada 1</h3>
+    <button id="nextJornada"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
 
-    <!-- Partido 2 -->
-    <div class="card-partido">
-      <div class="jornada">Jornada 2</div>
-      <div class="equipos">
-        <div class="equipo">
-          <img src="img/rival2.png" alt="Rival">
-          <p>RIVAL CITY</p>
-        </div>
-        <span class="vs">vs</span>
-        <div class="equipo">
-          <img src="img/kaizer.png" alt="Kaizer F.C.">
-          <p>KAIZER F.C.</p>
-        </div>
-      </div>
-      <div class="info-partido">
-        <p><i class="fa-regular fa-calendar"></i> Domingo 16/11 — 16:00</p>
-        <p><i class="fa-solid fa-location-dot"></i> Cancha Norte</p>
-      </div>
-      <a href="#" class="btn-partido">VER PREVIA</a>
-    </div>
-
+  <div id="contenedorPartidos" class="grid-partidos">
+    <!-- Los partidos se cargarán dinámicamente -->
   </div>
 </section>
+
+<script>
+  const jornadas = [
+    {
+      nombre: "Jornada 1",
+      logoCompetencia: "img/liga-regional.png", // logo de la competencia
+      partidos: [
+        {
+          local: "KAIZER F.C.",
+          visitante: "RIVAL F.C.",
+          fecha: "Sábado 09/11 — 15:00",
+          lugar: "Estadio Municipal",
+          logoLocal: "img/kaizer.png",
+          logoVisitante: "img/rival.png",
+          boton: "VER FICHA"
+        },
+        {
+          local: "RIVAL CITY",
+          visitante: "KAIZER F.C.",
+          fecha: "Miércoles 13/11 — 17:00",
+          lugar: "Cancha Norte",
+          logoLocal: "img/rival2.png",
+          logoVisitante: "img/kaizer.png",
+          boton: "VER PREVIA"
+        }
+      ]
+    },
+    {
+      nombre: "Jornada 2",
+      logoCompetencia: "img/champions.png",
+      partidos: [
+        {
+          local: "KAIZER F.C.",
+          visitante: "LEONES DEL SUR",
+          fecha: "Domingo 16/11 — 14:30",
+          lugar: "Campo Kaizer Arena",
+          logoLocal: "img/kaizer.png",
+          logoVisitante: "img/leones.png",
+          boton: "VER FICHA"
+        }
+      ]
+    }
+  ];
+
+  let indiceJornada = 0;
+
+  function mostrarJornada() {
+    const jornada = jornadas[indiceJornada];
+    document.getElementById("tituloJornada").textContent = jornada.nombre;
+
+    const contenedor = document.getElementById("contenedorPartidos");
+    contenedor.innerHTML = "";
+
+    jornada.partidos.forEach(p => {
+      const card = `
+        <div class="card-partido">
+          <div class="header-partido">
+            <p>${jornada.nombre}</p>
+            <img src="${jornada.logoCompetencia}" alt="Competencia" class="logo-competencia">
+          </div>
+          <div class="equipos">
+            <div class="equipo">
+              <img src="${p.logoLocal}" alt="${p.local}">
+              <p>${p.local}</p>
+            </div>
+            <span class="vs">vs</span>
+            <div class="equipo">
+              <img src="${p.logoVisitante}" alt="${p.visitante}">
+              <p>${p.visitante}</p>
+            </div>
+          </div>
+          <div class="info-partido">
+            <p><i class="fa-regular fa-calendar"></i> ${p.fecha}</p>
+            <p><i class="fa-solid fa-location-dot"></i> ${p.lugar}</p>
+          </div>
+          <a href="#" class="btn-partido">${p.boton}</a>
+        </div>`;
+      contenedor.innerHTML += card;
+    });
+  }
+
+  document.getElementById("prevJornada").addEventListener("click", () => {
+    indiceJornada = (indiceJornada - 1 + jornadas.length) % jornadas.length;
+    mostrarJornada();
+  });
+
+  document.getElementById("nextJornada").addEventListener("click", () => {
+    indiceJornada = (indiceJornada + 1) % jornadas.length;
+    mostrarJornada();
+  });
+
+  mostrarJornada();
+</script>
 
 
 
